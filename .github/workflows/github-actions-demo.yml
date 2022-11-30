@@ -20,5 +20,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "First step. Printing $RUNNER_OS"
-        uses: actions/checkout@v3
+      - name: Trying to set up a python env
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
       - run: ls
