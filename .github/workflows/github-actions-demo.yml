@@ -19,4 +19,5 @@ jobs:
   Guis-Job:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "First step. Printing $RUNNER.OS"
+      - run: echo "First step. Printing $RUNNER_OS"
+      - run: actions/checkout@v3 && ls
