@@ -20,8 +20,6 @@ jobs:
     needs: Explore-GitHub-Actions
     runs-on: ubuntu-latest
     steps:
-      - name: Doing the checkout
-        uses: actions/checkout@v3
       - name: Trying to set up the Python env
         uses: actions/setup-python@v4
         with:
