@@ -26,4 +26,9 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: "3.9"
-      - run: cd dir_one && python3 test_one.py
+      - name: Running the Python file
+        run: |
+          cd dir_one &&
+          python3 test_one.py &&
+          echo "Testing the & syntax 1" &&
+          echo "Testing the & syntax 2"
