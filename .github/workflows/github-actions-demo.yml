@@ -27,3 +27,5 @@ jobs:
         with:
           python-version: '3.9'
       - run: cd dir_one && ls
+      - name: Running the Python file!
+      - run: python3 test_one.py
