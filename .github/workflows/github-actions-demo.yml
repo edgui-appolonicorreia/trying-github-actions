@@ -32,3 +32,10 @@ jobs:
           python3 test_one.py &&
           echo "Testing the & syntax 1" &&
           echo "Testing the & syntax 2"
+  Second-Job:
+    needs: Explore-GitHub-Actions
+    runs-on: ubuntu-latest
+    steps:
+      - name: Starting the Second-Job. Checking out...
+        uses: actions/checkout@v3
+        run: ls
