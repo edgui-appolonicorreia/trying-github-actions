@@ -39,3 +39,10 @@ jobs:
       - name: Starting the Second-Job. Checking out...
         uses: actions/checkout@v3
       - run: ls
+  Third-Job:
+    needs: [Guis-Job, Second-Job]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Starting the Third-Job. Checking out...
+        uses: actions/checkout@v3
+      - run: echo "Just testing the Actions workflows"
