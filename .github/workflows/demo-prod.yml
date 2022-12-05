@@ -3,7 +3,7 @@ run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on:
   push:
     branches:
-      - dev
+      - main
 
 jobs:
   Explore-GitHub-Actions:
@@ -22,7 +22,7 @@ jobs:
       - run: echo "🍏 This job's status is ${{ job.status }}."
   Guis-Job:
     needs: Explore-GitHub-Actions
-    environment: dev
+    environment: prod
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
@@ -39,7 +39,7 @@ jobs:
           echo "Testing the & syntax 2"
   Second-Job:
     needs: Explore-GitHub-Actions
-    environment: dev
+    environment: prod
     runs-on: ubuntu-latest
     steps:
       - name: Starting the Second-Job. Checking out...
@@ -48,7 +48,7 @@ jobs:
   Third-Job:
     needs: [Guis-Job, Second-Job]
     runs-on: ubuntu-latest
-    environment: dev
+    environment: prod
     steps:
       - name: Starting the Third-Job. Checking out...
         uses: actions/checkout@v3
