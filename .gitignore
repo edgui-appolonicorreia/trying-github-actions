@@ -130,3 +130,7 @@ dmypy.json
 
 # Idea dirs
 .idea/
+
+# Terraform
+.terraform/
+.terraform.lock.hcl
